@@ -20,6 +20,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.prose a {
+  color: var(--foreground);
+  text-decoration: underline;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
