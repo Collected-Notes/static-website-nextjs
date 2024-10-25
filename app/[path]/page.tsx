@@ -42,19 +42,19 @@ export default async function NotePage({ params }: { params: { path: string } })
               remarkPlugins={[remarkGfm, remarkMath]}
               rehypePlugins={[rehypeHighlight, rehypeKatex]}
               components={{
-                h1: ({node, ...props}) => <h1 className="text-4xl font-bold mb-4" {...props} />,
-                h2: ({node, ...props}) => <h2 className="text-3xl font-bold mt-8 mb-4" {...props} />,
-                h3: ({node, ...props}) => <h3 className="text-2xl font-bold mt-6 mb-3" {...props} />,
-                p: ({node, ...props}) => <p className="mb-4" {...props} />,
-                ul: ({node, ...props}) => <ul className="list-disc pl-5 mb-4" {...props} />,
-                ol: ({node, ...props}) => <ol className="list-decimal pl-5 mb-4" {...props} />,
-                li: ({node, ...props}) => <li className="mb-2" {...props} />,
-                pre: ({node, ...props}) => (
+                h1: ({...props}) => <h1 className="text-4xl font-bold mb-4" {...props} />,
+                h2: ({...props}) => <h2 className="text-3xl font-bold mt-8 mb-4" {...props} />,
+                h3: ({...props}) => <h3 className="text-2xl font-bold mt-6 mb-3" {...props} />,
+                p: ({...props}) => <p className="mb-4" {...props} />,
+                ul: ({...props}) => <ul className="list-disc pl-5 mb-4" {...props} />,
+                ol: ({...props}) => <ol className="list-decimal pl-5 mb-4" {...props} />,
+                li: ({...props}) => <li className="mb-2" {...props} />,
+                pre: ({...props}) => (
                   <pre className="bg-gray-100 dark:bg-gray-900 rounded-md overflow-x-auto p-4" {...props} />
                 ),
-                code({node, inline, className, children, ...props}) {
+                code({className, children, ...props}) {
                   const match = /language-(\w+)/.exec(className || '')
-                  return !inline && match ? (
+                  return match ? (
                     <code className={className} {...props}>
                       {children}
                     </code>
@@ -64,19 +64,19 @@ export default async function NotePage({ params }: { params: { path: string } })
                     </code>
                   )
                 },
-                table: ({node, ...props}) => (
+                table: ({...props}) => (
                   <div className="overflow-x-auto">
                     <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700" {...props} />
                   </div>
                 ),
-                thead: ({node, ...props}) => <thead className="bg-gray-50 dark:bg-gray-800" {...props} />,
-                th: ({node, ...props}) => (
+                thead: ({...props}) => <thead className="bg-gray-50 dark:bg-gray-800" {...props} />,
+                th: ({...props}) => (
                   <th 
                     className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider" 
                     {...props} 
                   />
                 ),
-                td: ({node, ...props}) => (
+                td: ({...props}) => (
                   <td 
                     className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300" 
                     {...props} 

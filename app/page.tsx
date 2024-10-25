@@ -40,8 +40,6 @@ export default async function Home({ searchParams }: Props) {
         <div className="sm:mt-8">
           <NoteList 
             notes={data.notes} 
-            currentPage={currentPage}
-            totalNotes={data.total_notes}
           />
         </div>
       </div>
