@@ -32,6 +32,10 @@ export type NoteResponse = {
   note: NoteDetails;
 };
 
+export type SearchResponse = {
+  notes: NoteDetails[];
+};
+
 async function fetchAPI(endpoint: string) {
   const res = await fetch(`${API_URL}${endpoint}`, {
     cache: 'no-store',
@@ -53,4 +57,10 @@ export async function getSiteData(page: number = 1): Promise<ApiResponse> {
 
 export async function getNoteData(path: string): Promise<NoteResponse> {
   return fetchAPI(`/${SITE_PATH}/${path}.json`);
+}
+
+export async function searchNotes(term: string): Promise<SearchResponse> {
+  const params = new URLSearchParams({ term });
+  const response = await fetchAPI(`/sites/${SITE_PATH}/notes/search?${params.toString()}`);
+  return { notes: response };
 }

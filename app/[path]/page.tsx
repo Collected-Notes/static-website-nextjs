@@ -29,15 +29,15 @@ export default async function NotePage({ params }: { params: { path: string } })
     const data: NoteResponse = await getNoteData(params.path);
 
     return (
-      <div className="mx-auto max-w-3xl mt-8 sm:pt-16 sm:px-4 px-6">
-        <div>
-          <Link href="/">
+      <div className="mx-auto max-w-3xl pt-12 sm:px-4 px-6">
+        <div className="relative">
+          <Link href="/" className="absolute top-0 left-0">
             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
               <path d="M0 0h48v48h-48z" fill="none"></path>
               <path d="M40 22h-24.34l11.17-11.17-2.83-2.83-16 16 16 16 2.83-2.83-11.17-11.17h24.34v-4z" fill="currentColor"></path>
             </svg>
           </Link>
-          <div className="note prose lg:prose-xl py-8 pb-16">
+          <div className="note prose lg:prose-xl pt-24 pb-16">
             <ReactMarkdown
               remarkPlugins={[remarkGfm, remarkMath]}
               rehypePlugins={[rehypeHighlight, rehypeKatex]}
