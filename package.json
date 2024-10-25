@@ -9,18 +9,28 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^1.7.7",
+    "date-fns": "^4.1.0",
+    "katex": "^0.16.11",
+    "next": "14.2.15",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.15"
+    "react-katex": "^3.0.1",
+    "react-markdown": "^9.0.1",
+    "rehype-highlight": "^7.0.0",
+    "rehype-katex": "^7.0.1",
+    "remark-gfm": "^4.0.0",
+    "remark-math": "^6.0.0"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-katex": "^3.0.4",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.15",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.15"
+    "typescript": "^5"
   }
 }

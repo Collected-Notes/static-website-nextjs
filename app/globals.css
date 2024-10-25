@@ -25,3 +25,23 @@ body {
     text-wrap: balance;
   }
 }
+
+pre code.hljs {
+  background-color: transparent;
+  padding: 0;
+}
+
+.hljs[class*="language-"] {
+  padding: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  pre code.hljs {
+    color: white;
+  }
+  
+  pre {
+    margin-bottom: 1em;
+    padding: 0;
+  }
+}
