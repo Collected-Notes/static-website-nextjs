@@ -2,7 +2,6 @@ import NoteList from '../components/NoteList';
 import { getSiteData, ApiResponse } from '../lib/api';
 import { Metadata } from 'next';
 import { cache } from 'react';
-import Link from 'next/link';
 
 type Props = {
   params: { slug: string }
