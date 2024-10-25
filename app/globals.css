@@ -20,6 +20,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.prose {
+  margin-bottom: 2em;
+}
+
 .prose a {
   color: var(--foreground);
   text-decoration: underline;
