@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 
 export async function GET() {
   const SITE_PATH = process.env.SITE_PATH || 'unknown';
-  const DEPLOYMENT_URL = process.env.DEPLOYMENT_URL || 'unknown';
+  const DEPLOYMENT_URL = process.env.VERCEL_PROJECT_PRODUCTION_URL || 'unknown';
   const TEMPLATE_VERSION = '1.0';
 
   return NextResponse.json({
