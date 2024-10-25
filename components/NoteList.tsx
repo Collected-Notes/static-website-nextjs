@@ -4,12 +4,8 @@ import { formatDistanceToNow } from 'date-fns';
 
 export default function NoteList({ 
   notes, 
-  currentPage,
-  totalNotes,
 }: { 
   notes: Note[], 
-  currentPage: number,
-  totalNotes: number,
 }) {
   return (
     <ul role="list" className="pt-5 divide-y divide-gray-200 dark:divide-gray-800">
