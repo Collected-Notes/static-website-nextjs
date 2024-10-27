@@ -29,7 +29,7 @@ export default async function SearchPage({ searchParams }: Props) {
   return (
     <div className="mx-auto max-w-3xl pt-12 sm:px-4 px-6">
       <div className="relative">
-        <Link href="/" className="absolute top-0 left-0">
+        <Link href="/" className="sm:mb-0 mb-4 block">
           <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
             <path d="M0 0h48v48h-48z" fill="none"></path>
             <path d="M40 22h-24.34l11.17-11.17-2.83-2.83-16 16 16 16 2.83-2.83-11.17-11.17h24.34v-4z" fill="currentColor"></path>
